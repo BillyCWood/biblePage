@@ -1,46 +1,69 @@
-ul {
+body{
+    margin: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+header{
+    background: white;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    float: right;
+}
+
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color:#333;
-    border: 1px solid #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-
 }
 
-li{
+nav li{
 
-    display: inline;
-    float: right;
+    display: inline-block;
+    margin-left: 25px;
+    padding-top: 25px;
+    position: relative;
     
 }
 
-ul li.Home{
-    float: left;
-}
-
-ul li.EoS{
-    margin-right: 8px;
-}
-
-li a{
-    display: block;
-    color: white;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 14px 16px;
+nav a{
+    color: black;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
-li a:hover{
-    background-color: #111;
+nav a:hover{
+    color: #222;
 }
 
-.active{
-    background-color: #111;
-    color:black;
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #222;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
 }
