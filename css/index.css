@@ -19,6 +19,7 @@ header::after{
     float: left;
     text-decoration: none;
     font-size: 27px;
+    display: inline;
 }
 
 
@@ -42,14 +43,16 @@ nav li{
     
 }
 
-nav a{
+.topNav a{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     font-size: 14px;
+    display: block;
 }
 
-nav a:hover{
+.topNav a:hover{
     color: #222;
 }
 
@@ -78,23 +81,26 @@ nav a:hover::before{
     overflow: hidden;
 }
 
-.topNav .icon{display: none;}
+.topNav .icon{display: none;}/*This needs to display: inline when it is showing*/
 
 
 @media screen and (max-width: 600px){
     .topNav a:not(:first-child){display: none;}
-    .topNav a.icon{float: right; display: block;}
+    .topNav a.icon{
+        float:right; 
+        display: inline;
+    }
 }
 
 @media screen and (max-width: 600px){
     .topNav.responsive {position: relative;}
-    .topNav.topNav.responsive a.icon{
+    .topNav.responsive a.icon{
         position: absolute;
         right: 0;
         top: 0;
     }
 
-    .topNav.topNav a{
+    .topNav.responsive a{
         float: none;
         display: block;
         text-align: left;
