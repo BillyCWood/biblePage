@@ -25,18 +25,17 @@ header::after{
 
 
 nav{
+
     float: right;
 }
-
-nav ul {
+nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 nav li{
-
-    display: inline-block;
+    display:inline-block;
     margin-left: 25px;
     padding-top: 25px;
     position: relative;
@@ -85,10 +84,11 @@ nav a:hover::before{
 
 
 @media screen and (max-width: 600px){
-    .topNav a:not(:first-child){display: none;}
+    nav :not(:last-child){display: none;}
     .topNav a.icon{
         float:right; 
         display: inline;
+        padding-top: 17px;
     }
 }
 
